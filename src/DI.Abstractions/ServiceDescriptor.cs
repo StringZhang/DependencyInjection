@@ -499,6 +499,24 @@ namespace Microsoft.Extensions.DependencyInjection
             return new ServiceDescriptor(serviceType, implementationType, lifetime);
         }
 
+
+        #region 添加代码.zf
+
+        /// <summary>
+        /// Hosting源码中{ServiceCollectionHostedServiceExtensions.AddHostedService}其中一个重要步骤都会调用类似下面的一个方法
+        /// return new ServiceDescriptor(serviceType, implementationType, lifetime);
+        /// </summary>
+        /// <param name="serviceType"></param>
+        /// <param name="implementationType"></param>
+        /// <param name="lifetime"></param>
+        /// <returns></returns>
+        public static ServiceDescriptor SomeMethodTest(Type serviceType, Type implementationType, ServiceLifetime lifetime)
+        {
+            return new ServiceDescriptor(serviceType, implementationType, lifetime);
+        }
+
+        #endregion
+
         /// <summary>
         /// Creates an instance of <see cref="ServiceDescriptor"/> with the specified
         /// <paramref name="serviceType"/>, <paramref name="implementationFactory"/>,
